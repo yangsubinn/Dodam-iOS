@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */; };
 		2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A726CAA44800E24A5E /* AppDelegate.swift */; };
 		2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A926CAA44800E24A5E /* SceneDelegate.swift */; };
 		2BA107AF26CAA44800E24A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107AD26CAA44800E24A5E /* Main.storyboard */; };
@@ -37,13 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		2B04E5EB26CAB09100DCEABA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA107A426CAA44800E24A5E /* Dodam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dodam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107A726CAA44800E24A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA107A926CAA44800E24A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2BA107AE26CAA44800E24A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BA107B026CAA44900E24A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BA107B326CAA44900E24A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2BA107B526CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA107BA26CAA44900E24A5E /* DodamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107BE26CAA44900E24A5E /* DodamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodamTests.swift; sourceTree = "<group>"; };
 		2BA107C026CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 		2BA107D726CAA48D00E24A5E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2BA107B526CAA44900E24A5E /* Info.plist */,
+				2B04E5EB26CAB09100DCEABA /* Info.plist */,
 				2BA107B026CAA44900E24A5E /* Assets.xcassets */,
 				2BA107E226CAA57000E24A5E /* Fonts */,
 				2BA107E126CAA56100E24A5E /* APIServices */,
@@ -190,6 +192,7 @@
 		2BA107DC26CAA51000E24A5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -248,7 +251,6 @@
 				43C4EF238D6DC5F1475E64C8 /* Pods-DodamTests.debug.xcconfig */,
 				2F72BD56E147B99CE6A9357F /* Pods-DodamTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -502,6 +504,7 @@
 			files = (
 				2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */,
 				2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */,
+				2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +683,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
-				INFOPLIST_FILE = Dodam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dodam/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -700,7 +703,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
-				INFOPLIST_FILE = Dodam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dodam/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
