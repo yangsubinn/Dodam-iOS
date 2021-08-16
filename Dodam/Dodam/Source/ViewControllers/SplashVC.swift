@@ -14,18 +14,14 @@ class SplashVC: UIViewController {
     let logoTypoImage = UIImageView()
     let loginButton = BlueButton(title: "Log in")
     let signUpButton = LightButton(title: "Sign up")
-    
-//    var logoAni = CGRect(x: UIScreen.main.bounds.width / 2 - 20 , y: UIScreen.main.bounds.height / 2 , width: 104, height: 128)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupLayout()
-//        reset()
         setupLayout()
         configUI()
         start()
-//        setupLayoutAfterAnimation()
     }
     
     private func start() {
@@ -39,7 +35,6 @@ class SplashVC: UIViewController {
                         let frame = CGAffineTransform(translationX: 0, y: -130)
                         self.logoImage.transform = frame
                        }, completion: {finished in /// 앞 애니메이션 끝난 다음 실행되는 부분
-            /// logoTypoImage 애니메이션 넣을 부분
                         UIView.animate(withDuration: 0.5) {
                             self.logoTypoImage.alpha = 1.0
                             self.loginButton.alpha = 1.0
@@ -78,25 +73,6 @@ class SplashVC: UIViewController {
             make.width.equalTo(104)
             make.height.equalTo(128)
         }
-
-//        logoTypoImage.snp.makeConstraints { make in
-//            make.centerX.equalToSuperview()
-//            make.bottom.equalTo(loginButton.snp.top).offset(40)
-//            make.width.equalTo(110)
-//            make.height.equalTo(36)
-//        }
-//
-//        loginButton.snp.makeConstraints { make in
-//            make.centerX.equalToSuperview()
-//            make.leading.trailing.equalToSuperview().inset(20)
-//            make.bottom.equalTo(signUpButton.snp.top).offset(14)
-//        }
-//
-//        signUpButton.snp.makeConstraints { make in
-//            make.centerX.equalToSuperview()
-//            make.leading.trailing.equalToSuperview().inset(20)
-//            make.bottom.equalTo(view.snp.bottom).offset(270)
-//        }
         
         logoTypoImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
