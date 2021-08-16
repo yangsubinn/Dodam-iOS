@@ -21,12 +21,17 @@ class SplashVC: UIViewController {
     
     func configUI() {
         logoImage.image = UIImage(named: "logo")
-        logoImage.backgroundColor = .blue
     }
     
     func setupLayout() {
         view.addSubview(logoImage)
         
+        logoImage.snp.makeConstraints { make in
+            make.centerX.equalToSuperview().inset(20)
+            make.centerY.equalToSuperview()
+            make.width.equalTo(104)
+            make.height.equalTo(128)
+        }
     }
     
 
