@@ -20,7 +20,7 @@ class BlueButton: UIButton {
     }
     
     private func configUI(title: String) {
-        backgroundColor = .darkGray
+        backgroundColor = .mainBlue
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         titleLabel?.font = .systemFont(ofSize: 18)

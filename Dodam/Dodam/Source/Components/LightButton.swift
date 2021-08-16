@@ -20,7 +20,7 @@ class LightButton: UIButton {
     }
     
     private func configUI(title: String) {
-        backgroundColor = .lightGray
+        backgroundColor = .subGray
         setTitle(title, for: .normal)
         setTitleColor(.black, for: .normal)
         titleLabel?.font = .systemFont(ofSize: 18)
