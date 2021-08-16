@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */; };
+		2B04E5EE26CAB6DE00DCEABA /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */; };
+		2B04E5F026CABC0400DCEABA /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5EF26CABC0400DCEABA /* LightButton.swift */; };
 		2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A726CAA44800E24A5E /* AppDelegate.swift */; };
 		2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A926CAA44800E24A5E /* SceneDelegate.swift */; };
 		2BA107AF26CAA44800E24A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107AD26CAA44800E24A5E /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		2BA107B426CAA44900E24A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107B226CAA44900E24A5E /* LaunchScreen.storyboard */; };
 		2BA107BF26CAA44900E24A5E /* DodamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107BE26CAA44900E24A5E /* DodamTests.swift */; };
 		2BA107CA26CAA44900E24A5E /* DodamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107C926CAA44900E24A5E /* DodamUITests.swift */; };
+		80BB46DECA25C14BECDE9747 /* Pods_DodamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1511BF727120DCEE08A0A8B /* Pods_DodamTests.framework */; };
+		C65A38C199AFAAF039220C75 /* Pods_Dodam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610DAEBE4514050E1F3F6084 /* Pods_Dodam.framework */; };
+		CB3444624E3BE6BFEC201497 /* Pods_Dodam_DodamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48BFEC5B3879569D547D465 /* Pods_Dodam_DodamUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +40,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		2B04E5EB26CAB09100DCEABA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		2B04E5EF26CABC0400DCEABA /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		2BA107A426CAA44800E24A5E /* Dodam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dodam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107A726CAA44800E24A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA107A926CAA44800E24A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2BA107AE26CAA44800E24A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BA107B026CAA44900E24A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BA107B326CAA44900E24A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2BA107B526CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA107BA26CAA44900E24A5E /* DodamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107BE26CAA44900E24A5E /* DodamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodamTests.swift; sourceTree = "<group>"; };
 		2BA107C026CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA107C526CAA44900E24A5E /* DodamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107C926CAA44900E24A5E /* DodamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodamUITests.swift; sourceTree = "<group>"; };
 		2BA107CB26CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F72BD56E147B99CE6A9357F /* Pods-DodamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DodamTests.release.xcconfig"; path = "Target Support Files/Pods-DodamTests/Pods-DodamTests.release.xcconfig"; sourceTree = "<group>"; };
+		43C4EF238D6DC5F1475E64C8 /* Pods-DodamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DodamTests.debug.xcconfig"; path = "Target Support Files/Pods-DodamTests/Pods-DodamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D94BB97EC2A4890029D2412 /* Pods-Dodam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dodam.debug.xcconfig"; path = "Target Support Files/Pods-Dodam/Pods-Dodam.debug.xcconfig"; sourceTree = "<group>"; };
+		610DAEBE4514050E1F3F6084 /* Pods_Dodam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dodam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB03FD02FDAE6F3F8C467320 /* Pods-Dodam-DodamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dodam-DodamUITests.debug.xcconfig"; path = "Target Support Files/Pods-Dodam-DodamUITests/Pods-Dodam-DodamUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1511BF727120DCEE08A0A8B /* Pods_DodamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DodamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13D0A3632B2FE4EC9980054 /* Pods-Dodam-DodamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dodam-DodamUITests.release.xcconfig"; path = "Target Support Files/Pods-Dodam-DodamUITests/Pods-Dodam-DodamUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E19B56F8633F444ECA7EA776 /* Pods-Dodam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dodam.release.xcconfig"; path = "Target Support Files/Pods-Dodam/Pods-Dodam.release.xcconfig"; sourceTree = "<group>"; };
+		E48BFEC5B3879569D547D465 /* Pods_Dodam_DodamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dodam_DodamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65A38C199AFAAF039220C75 /* Pods_Dodam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80BB46DECA25C14BECDE9747 /* Pods_DodamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3444624E3BE6BFEC201497 /* Pods_Dodam_DodamUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,8 @@
 				2BA107BD26CAA44900E24A5E /* DodamTests */,
 				2BA107C826CAA44900E24A5E /* DodamUITests */,
 				2BA107A526CAA44800E24A5E /* Products */,
+				7F1A2385E1D8644AD3547327 /* Pods */,
+				A4AB934A55B536D5552AD2E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +147,7 @@
 		2BA107D726CAA48D00E24A5E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2BA107B526CAA44900E24A5E /* Info.plist */,
+				2B04E5EB26CAB09100DCEABA /* Info.plist */,
 				2BA107B026CAA44900E24A5E /* Assets.xcassets */,
 				2BA107E226CAA57000E24A5E /* Fonts */,
 				2BA107E126CAA56100E24A5E /* APIServices */,
@@ -173,6 +196,7 @@
 		2BA107DC26CAA51000E24A5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +211,8 @@
 		2BA107DE26CAA52100E24A5E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */,
+				2B04E5EF26CABC0400DCEABA /* LightButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -221,6 +247,29 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		7F1A2385E1D8644AD3547327 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D94BB97EC2A4890029D2412 /* Pods-Dodam.debug.xcconfig */,
+				E19B56F8633F444ECA7EA776 /* Pods-Dodam.release.xcconfig */,
+				CB03FD02FDAE6F3F8C467320 /* Pods-Dodam-DodamUITests.debug.xcconfig */,
+				E13D0A3632B2FE4EC9980054 /* Pods-Dodam-DodamUITests.release.xcconfig */,
+				43C4EF238D6DC5F1475E64C8 /* Pods-DodamTests.debug.xcconfig */,
+				2F72BD56E147B99CE6A9357F /* Pods-DodamTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A4AB934A55B536D5552AD2E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				610DAEBE4514050E1F3F6084 /* Pods_Dodam.framework */,
+				E48BFEC5B3879569D547D465 /* Pods_Dodam_DodamUITests.framework */,
+				D1511BF727120DCEE08A0A8B /* Pods_DodamTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BA107CE26CAA44900E24A5E /* Build configuration list for PBXNativeTarget "Dodam" */;
 			buildPhases = (
+				BEF51FF0D4B018113B742D61 /* [CP] Check Pods Manifest.lock */,
 				2BA107A026CAA44800E24A5E /* Sources */,
 				2BA107A126CAA44800E24A5E /* Frameworks */,
 				2BA107A226CAA44800E24A5E /* Resources */,
+				77A55B21729BEB7E1EBA9970 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BA107D126CAA44900E24A5E /* Build configuration list for PBXNativeTarget "DodamTests" */;
 			buildPhases = (
+				604FE3F468512ABD19FB9B53 /* [CP] Check Pods Manifest.lock */,
 				2BA107B626CAA44900E24A5E /* Sources */,
 				2BA107B726CAA44900E24A5E /* Frameworks */,
 				2BA107B826CAA44900E24A5E /* Resources */,
@@ -263,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BA107D426CAA44900E24A5E /* Build configuration list for PBXNativeTarget "DodamUITests" */;
 			buildPhases = (
+				EF958E3ADBD15C674C81E7F4 /* [CP] Check Pods Manifest.lock */,
 				2BA107C126CAA44900E24A5E /* Sources */,
 				2BA107C226CAA44900E24A5E /* Frameworks */,
 				2BA107C326CAA44900E24A5E /* Resources */,
+				8A2148AA7C1848745B6AC0F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,6 +400,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		604FE3F468512ABD19FB9B53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DodamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77A55B21729BEB7E1EBA9970 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dodam/Pods-Dodam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dodam/Pods-Dodam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dodam/Pods-Dodam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A2148AA7C1848745B6AC0F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dodam-DodamUITests/Pods-Dodam-DodamUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dodam-DodamUITests/Pods-Dodam-DodamUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dodam-DodamUITests/Pods-Dodam-DodamUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEF51FF0D4B018113B742D61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dodam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF958E3ADBD15C674C81E7F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dodam-DodamUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BA107A026CAA44800E24A5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -353,6 +510,9 @@
 			files = (
 				2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */,
 				2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */,
+				2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */,
+				2B04E5F026CABC0400DCEABA /* LightButton.swift in Sources */,
+				2B04E5EE26CAB6DE00DCEABA /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,12 +685,13 @@
 		};
 		2BA107CF26CAA44900E24A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D94BB97EC2A4890029D2412 /* Pods-Dodam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
-				INFOPLIST_FILE = Dodam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dodam/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,12 +705,13 @@
 		};
 		2BA107D026CAA44900E24A5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19B56F8633F444ECA7EA776 /* Pods-Dodam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
-				INFOPLIST_FILE = Dodam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dodam/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,6 +725,7 @@
 		};
 		2BA107D226CAA44900E24A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43C4EF238D6DC5F1475E64C8 /* Pods-DodamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -585,6 +748,7 @@
 		};
 		2BA107D326CAA44900E24A5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F72BD56E147B99CE6A9357F /* Pods-DodamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -607,6 +771,7 @@
 		};
 		2BA107D526CAA44900E24A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB03FD02FDAE6F3F8C467320 /* Pods-Dodam-DodamUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +792,7 @@
 		};
 		2BA107D626CAA44900E24A5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13D0A3632B2FE4EC9980054 /* Pods-Dodam-DodamUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
