@@ -11,6 +11,12 @@
 		2B04E5EE26CAB6DE00DCEABA /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */; };
 		2B04E5F026CABC0400DCEABA /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5EF26CABC0400DCEABA /* LightButton.swift */; };
 		2B04E5F226CACC8200DCEABA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5F126CACC8200DCEABA /* UIColor+Extension.swift */; };
+		2B04E5F426CAD3EE00DCEABA /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5F326CAD3EE00DCEABA /* UIFont+Extension.swift */; };
+		2B04E5FA26CAD7E400DCEABA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E5F926CAD7E400DCEABA /* Lato-Regular.ttf */; };
+		2B04E5FB26CAD7EC00DCEABA /* AppleSDGothicNeoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E5F626CAD63D00DCEABA /* AppleSDGothicNeoB.ttf */; };
+		2B04E5FC26CAD7EC00DCEABA /* AppleSDGothicNeoL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E5F826CAD63D00DCEABA /* AppleSDGothicNeoL.ttf */; };
+		2B04E5FD26CAD7EC00DCEABA /* AppleSDGothicNeoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E5F726CAD63D00DCEABA /* AppleSDGothicNeoM.ttf */; };
+		2B04E5FE26CAD7EF00DCEABA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E5F526CAD45B00DCEABA /* Lato-Bold.ttf */; };
 		2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A726CAA44800E24A5E /* AppDelegate.swift */; };
 		2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A926CAA44800E24A5E /* SceneDelegate.swift */; };
 		2BA107AF26CAA44800E24A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107AD26CAA44800E24A5E /* Main.storyboard */; };
@@ -46,6 +52,12 @@
 		2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		2B04E5EF26CABC0400DCEABA /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		2B04E5F126CACC8200DCEABA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		2B04E5F326CAD3EE00DCEABA /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		2B04E5F526CAD45B00DCEABA /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		2B04E5F626CAD63D00DCEABA /* AppleSDGothicNeoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB.ttf; sourceTree = "<group>"; };
+		2B04E5F726CAD63D00DCEABA /* AppleSDGothicNeoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM.ttf; sourceTree = "<group>"; };
+		2B04E5F826CAD63D00DCEABA /* AppleSDGothicNeoL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoL.ttf; sourceTree = "<group>"; };
+		2B04E5F926CAD7E400DCEABA /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2BA107A426CAA44800E24A5E /* Dodam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dodam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107A726CAA44800E24A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA107A926CAA44800E24A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				2B04E5F126CACC8200DCEABA /* UIColor+Extension.swift */,
+				2B04E5F326CAD3EE00DCEABA /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +259,11 @@
 		2BA107E226CAA57000E24A5E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2B04E5F526CAD45B00DCEABA /* Lato-Bold.ttf */,
+				2B04E5F926CAD7E400DCEABA /* Lato-Regular.ttf */,
+				2B04E5F626CAD63D00DCEABA /* AppleSDGothicNeoB.ttf */,
+				2B04E5F826CAD63D00DCEABA /* AppleSDGothicNeoL.ttf */,
+				2B04E5F726CAD63D00DCEABA /* AppleSDGothicNeoM.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -382,8 +400,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA107B426CAA44900E24A5E /* LaunchScreen.storyboard in Resources */,
+				2B04E5FD26CAD7EC00DCEABA /* AppleSDGothicNeoM.ttf in Resources */,
+				2B04E5FB26CAD7EC00DCEABA /* AppleSDGothicNeoB.ttf in Resources */,
+				2B04E5FC26CAD7EC00DCEABA /* AppleSDGothicNeoL.ttf in Resources */,
 				2BA107B126CAA44900E24A5E /* Assets.xcassets in Resources */,
 				2BA107AF26CAA44800E24A5E /* Main.storyboard in Resources */,
+				2B04E5FA26CAD7E400DCEABA /* Lato-Regular.ttf in Resources */,
+				2B04E5FE26CAD7EF00DCEABA /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B04E5F426CAD3EE00DCEABA /* UIFont+Extension.swift in Sources */,
 				2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */,
 				2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */,
 				2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */,

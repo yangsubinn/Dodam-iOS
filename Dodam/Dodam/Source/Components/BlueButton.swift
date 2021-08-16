@@ -23,7 +23,7 @@ class BlueButton: UIButton {
         backgroundColor = .mainBlue
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = .systemFont(ofSize: 18)
+        titleLabel?.font = .enRegularSystemFont(ofSize: 18)
         layer.cornerRadius = 6
     }
     
