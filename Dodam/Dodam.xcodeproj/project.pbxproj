@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */; };
+		2B04E5EE26CAB6DE00DCEABA /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */; };
+		2B04E5F026CABC0400DCEABA /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04E5EF26CABC0400DCEABA /* LightButton.swift */; };
 		2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A726CAA44800E24A5E /* AppDelegate.swift */; };
 		2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A926CAA44800E24A5E /* SceneDelegate.swift */; };
 		2BA107AF26CAA44800E24A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107AD26CAA44800E24A5E /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		2B04E5EB26CAB09100DCEABA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		2B04E5EF26CABC0400DCEABA /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		2BA107A426CAA44800E24A5E /* Dodam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dodam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107A726CAA44800E24A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA107A926CAA44800E24A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 		2BA107DE26CAA52100E24A5E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2B04E5ED26CAB6DE00DCEABA /* BlueButton.swift */,
+				2B04E5EF26CABC0400DCEABA /* LightButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -505,6 +511,8 @@
 				2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */,
 				2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */,
 				2B04E5EA26CAAEBE00DCEABA /* SplashVC.swift in Sources */,
+				2B04E5F026CABC0400DCEABA /* LightButton.swift in Sources */,
+				2B04E5EE26CAB6DE00DCEABA /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
