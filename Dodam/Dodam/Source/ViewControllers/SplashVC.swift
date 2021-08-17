@@ -49,11 +49,8 @@ class SplashVC: UIViewController {
     }
     
     func setupLayout() {
-        view.addSubview(logoImage)
-        view.addSubview(loginButton)
-        view.addSubview(logoTypoImage)
-        view.addSubview(signUpButton)
-
+        view.addSubviews([logoImage, logoTypoImage, loginButton, signUpButton])
+        
         logoImage.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
             make.width.height.equalTo(142)
