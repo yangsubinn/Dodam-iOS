@@ -22,7 +22,7 @@ class LightButton: UIButton {
     private func configUI(title: String) {
         backgroundColor = .subGray
         setTitle(title, for: .normal)
-        setTitleColor(.black, for: .normal)
+        setTitleColor(.mainBlue, for: .normal)
         titleLabel?.font = .enRegularSystemFont(ofSize: 18)
         layer.cornerRadius = 6
     }

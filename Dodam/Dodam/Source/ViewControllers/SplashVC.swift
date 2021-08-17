@@ -28,7 +28,7 @@ class SplashVC: UIViewController {
         UIView.animate(withDuration: 1.0,
                        delay: 0.5,
                        animations: {
-                        let frame = CGAffineTransform(translationX: 0, y: -130)
+                        let frame = CGAffineTransform(translationX: 0, y: -110)
                         self.logoImage.transform = frame
                        }, completion: {finished in /// 앞 애니메이션 끝난 다음 실행되는 부분
                         UIView.animate(withDuration: 0.6) {
@@ -58,7 +58,7 @@ class SplashVC: UIViewController {
         
         logoTypoImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.snp.top).offset(380)
+            make.top.equalTo(view.snp.top).offset(400)
             make.width.equalTo(110)
             make.height.equalTo(36)
         }
