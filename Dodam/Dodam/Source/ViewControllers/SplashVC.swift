@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SplashVC: UIViewController {
+class SplashVC: UIViewController, UITextFieldDelegate {
     
     let logoImage = UIImageView()
     let logoTypoImage = UIImageView()
@@ -34,6 +34,9 @@ class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        idTextField.delegate = self
+        pwTextField.delegate = self
         
         setupLayout()
         configUI()
@@ -238,6 +241,17 @@ class SplashVC: UIViewController {
             make.top.equalTo(naverButton.snp.bottom).offset(11)
             make.leading.trailing.equalToSuperview().inset(16)
         }
+    }
+    
+    // return키 눌렀을 때 키보드 내려가도록
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    // 화면 눌렀을 때 키보드 내려가도록
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
     
     private func setupAddTarget() {
