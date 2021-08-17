@@ -64,8 +64,7 @@ class SplashVC: UIViewController {
                        animations: {
                         let frame = CGAffineTransform(translationX: 0, y: -110)
                         self.logoImage.transform = frame
-//                        self.logoImage.alpha = 1.0
-                       }, completion: {finished in /// 앞 애니메이션 끝난 다음 실행되는 부분
+                       }, completion: {finished in
                         UIView.animate(withDuration: 0.6) {
                             self.logoTypoImage.alpha = 1.0
                             self.loginButton.alpha = 1.0
@@ -80,12 +79,9 @@ class SplashVC: UIViewController {
         logoImage.image = UIImage(named: "logo")
         logoTypoImage.image = UIImage(named: "logo_typo")
         
-//        logoImage.alpha = 0.6
         logoTypoImage.alpha = 0.0
         loginButton.alpha = 0.0
         signUpButton.alpha = 0.0
-        
-//        backButton.backgroundColor = .yellow
         
         loginTitle.text = "LOGIN"
         loginTitle.font = .enBoldSystemFont(ofSize: 26)
@@ -196,7 +192,6 @@ class SplashVC: UIViewController {
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
-//            make.top.equalToSuperview().offset(440)
         }
         
         bottomSignUpButton.snp.makeConstraints { make in
@@ -245,14 +240,6 @@ class SplashVC: UIViewController {
             self.logoTypoImage.alpha = 0
             self.signUpButton.alpha = 0
         } completion: { finshed in
-//            UIView.animate(withDuration: 0.2) {
-//                self.setupLoginLayout()
-////                self.logoImage.alpha = 0
-////                self.logoTypoImage.alpha = 0
-////                self.signUpButton.alpha = 0
-//            } completion: { finshed in
-//                
-//            }
             self.setupLoginLayout()
         }
     }

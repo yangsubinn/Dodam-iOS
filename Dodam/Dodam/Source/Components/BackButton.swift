@@ -28,7 +28,6 @@ class BackButton: UIButton {
     
     private func configUI() {
         setImage(UIImage(named: "backButton"), for: .normal)
-//        backgroundColor = .blue
     }
     
     private func setupLayout() {
