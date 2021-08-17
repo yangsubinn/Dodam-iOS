@@ -26,6 +26,7 @@
 		2BA107B426CAA44900E24A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107B226CAA44900E24A5E /* LaunchScreen.storyboard */; };
 		2BA107BF26CAA44900E24A5E /* DodamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107BE26CAA44900E24A5E /* DodamTests.swift */; };
 		2BA107CA26CAA44900E24A5E /* DodamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107C926CAA44900E24A5E /* DodamUITests.swift */; };
+		2BBEE1C526CC18E5009064B9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C426CC18E5009064B9 /* MainVC.swift */; };
 		80BB46DECA25C14BECDE9747 /* Pods_DodamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1511BF727120DCEE08A0A8B /* Pods_DodamTests.framework */; };
 		C65A38C199AFAAF039220C75 /* Pods_Dodam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610DAEBE4514050E1F3F6084 /* Pods_Dodam.framework */; };
 		CB3444624E3BE6BFEC201497 /* Pods_Dodam_DodamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48BFEC5B3879569D547D465 /* Pods_Dodam_DodamUITests.framework */; };
@@ -74,6 +75,7 @@
 		2BA107C526CAA44900E24A5E /* DodamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107C926CAA44900E24A5E /* DodamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodamUITests.swift; sourceTree = "<group>"; };
 		2BA107CB26CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BBEE1C426CC18E5009064B9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		2F72BD56E147B99CE6A9357F /* Pods-DodamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DodamTests.release.xcconfig"; path = "Target Support Files/Pods-DodamTests/Pods-DodamTests.release.xcconfig"; sourceTree = "<group>"; };
 		43C4EF238D6DC5F1475E64C8 /* Pods-DodamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DodamTests.debug.xcconfig"; path = "Target Support Files/Pods-DodamTests/Pods-DodamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D94BB97EC2A4890029D2412 /* Pods-Dodam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dodam.debug.xcconfig"; path = "Target Support Files/Pods-Dodam/Pods-Dodam.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */,
+				2BBEE1C426CC18E5009064B9 /* MainVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B04E5F426CAD3EE00DCEABA /* UIFont+Extension.swift in Sources */,
+				2BBEE1C526CC18E5009064B9 /* MainVC.swift in Sources */,
 				2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */,
 				2B20C04126CB835300037FDD /* UIView+Extension.swift in Sources */,
 				2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */,

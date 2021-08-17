@@ -12,7 +12,7 @@ class SplashVC: UIViewController {
     
     let logoImage = UIImageView()
     let logoTypoImage = UIImageView()
-    let loginButton = BlueButton(title: "Log in")
+    let firstLoginButton = BlueButton(title: "Log in")
     let signUpButton = LightButton(title: "Sign up")
     
     let backButton = BackButton()
@@ -23,6 +23,7 @@ class SplashVC: UIViewController {
     let pwTextField = UITextField()
     let helpLabel = UILabel()
     
+    let secondLoginButton = UIButton()
     let bottomSignUpButton = UIButton()
     let divideLine = UIView()
     let otherLoginLabel = UILabel()
@@ -67,7 +68,7 @@ class SplashVC: UIViewController {
                        }, completion: {finished in
                         UIView.animate(withDuration: 0.6) {
                             self.logoTypoImage.alpha = 1.0
-                            self.loginButton.alpha = 1.0
+                            self.firstLoginButton.alpha = 1.0
                             self.signUpButton.alpha = 1.0
                         }
         })
@@ -80,7 +81,7 @@ class SplashVC: UIViewController {
         logoTypoImage.image = UIImage(named: "logo_typo")
         
         logoTypoImage.alpha = 0.0
-        loginButton.alpha = 0.0
+        firstLoginButton.alpha = 0.0
         signUpButton.alpha = 0.0
         
         loginTitle.text = "LOGIN"
@@ -106,6 +107,9 @@ class SplashVC: UIViewController {
         helpLabel.font = .systemFont(ofSize: 12)
         helpLabel.textColor = .lightGray
         
+        // 터치영역 잡는거로만 쓸거라 clear
+        secondLoginButton.backgroundColor = .clear
+        
         bottomSignUpButton.setTitle("Sign up", for: .normal)
         bottomSignUpButton.setTitleColor(.mainBlue, for: .normal)
         bottomSignUpButton.titleLabel?.font = .enRegularSystemFont(ofSize: 18)
@@ -119,7 +123,7 @@ class SplashVC: UIViewController {
     }
     
     func setupLayout() {
-        view.addSubviews([logoImage, logoTypoImage, loginButton, signUpButton])
+        view.addSubviews([logoImage, logoTypoImage, firstLoginButton, signUpButton])
         
         logoImage.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
@@ -133,7 +137,7 @@ class SplashVC: UIViewController {
             make.height.equalTo(36)
         }
         
-        loginButton.snp.makeConstraints { make in
+        firstLoginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalTo(logoTypoImage.snp.top).offset(80)
@@ -142,12 +146,12 @@ class SplashVC: UIViewController {
         signUpButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(loginButton.snp.bottom).offset(14)
+            make.top.equalTo(firstLoginButton.snp.bottom).offset(14)
         }
     }
     
     func setupLoginLayout() {
-        view.addSubviews([backButton, loginTitle, idLabel, loginButton,
+        view.addSubviews([backButton, loginTitle, idLabel,firstLoginButton, secondLoginButton,
                           idTextField, pwLabel, pwTextField, helpLabel,
                           bottomSignUpButton, divideLine, otherLoginLabel,
                           facebookButton, naverButton, kakaoButton])
@@ -189,9 +193,17 @@ class SplashVC: UIViewController {
             make.trailing.equalToSuperview().inset(16)
         }
         
-        loginButton.snp.makeConstraints { make in
+        firstLoginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        // 기존에 있던 로그인버튼 위에 터치영역으로 쓸 로그인버튼을 하나 더 얹어서 addTarget 쓸라구
+        // 같은 버튼에서 두가지의 액션이 나와야 하는데, 어떻게 해야할지 모르겠어서 일단 위에 투명한 버튼을 하나 더 얹었습니다..
+        secondLoginButton.snp.remakeConstraints { make in
+            make.bottom.equalTo(bottomSignUpButton.snp.top)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(60)
         }
         
         bottomSignUpButton.snp.makeConstraints { make in
@@ -229,18 +241,32 @@ class SplashVC: UIViewController {
     }
     
     private func setupAddTarget() {
-        loginButton.addTarget(self, action: #selector(touchUpLoginButton), for: .touchUpInside)
+        firstLoginButton.addTarget(self, action: #selector(touchUpLoginButton), for: .touchUpInside)
+        secondLoginButton.addTarget(self, action: #selector(touchUpSecondLoginButton(_:)), for: .touchUpInside)
     }
     
     @objc func touchUpLoginButton(_ sender: UIButton) {
         UIView.animate(withDuration: 1) {
             let loginButtonFrame = CGAffineTransform(translationX: 0, y: -40)
-            self.loginButton.transform = loginButtonFrame
+            self.firstLoginButton.transform = loginButtonFrame
             self.logoImage.alpha = 0
             self.logoTypoImage.alpha = 0
             self.signUpButton.alpha = 0
         } completion: { finshed in
             self.setupLoginLayout()
+        }
+    }
+    
+    @objc func touchUpSecondLoginButton(_ sender: UIButton) {
+        print("LoginButton Clicked")
+        
+        // MainVC로 전환할 때 1.0초 딜레이
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (t) in
+            t.invalidate()
+            guard let vc = self.storyboard?.instantiateViewController(identifier: "MainVC") as? MainVC else { return }
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
