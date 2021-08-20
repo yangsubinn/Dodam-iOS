@@ -8,7 +8,7 @@
 import UIKit
 
 class MainVC: UIViewController {
-    
+    // MARK: - Properties
     let logoImage = UIImageView()
     let menuButton = UIButton()
     let powBackImage = UIImageView()
@@ -18,35 +18,70 @@ class MainVC: UIViewController {
     let petAgeLabel = UILabel()
     let petBirthYearLabel = UILabel()
     let editPetButton = UIButton()
-    
     let firstLine = UIView()
     let healthCareTitle = UILabel()
     let healthCareSubTitle = UILabel()
     let healthCareDetailButton = UIButton()
-    // collectionView
-    let healthCareCollectionView = UIView()
-    
     let secondLine = UIView()
     let deviceConnectTitle = UILabel()
     let deviceConnectSubTitle = UILabel()
     let deviceConnectDetailButton = UIButton()
-    // colectionView
-    let deviceConncectCollectionView = UIView()
-    
     let thirdLind = UIView()
     let shopTitle = UILabel()
     let shopSubTitle = UILabel()
     let shopDetailButton = UIButton()
+    
+    let healthCareTitles = ["체중", "심박수", "호흡수", "체온", "수면관리"]
+    let healthCareNumbers = ["6.7", "90", "18", "38.5", "8"]
+    let healthCareUnits = ["kg", "bpm", "회/분", "도", "시간 취침"]
+    
+    private lazy var healthCareCollectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.itemSize = CGSize(width: 100, height: 100)
+        layout.minimumLineSpacing = 16
+        
+        let collectinoView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectinoView.register(healthCareCVC.self, forCellWithReuseIdentifier: healthCareCVC.identifier)
+        collectinoView.showsHorizontalScrollIndicator = false
+        collectinoView.backgroundColor = .clear
+        
+        collectinoView.delegate = self
+        collectinoView.dataSource = self
+        
+        return collectinoView
+    }()
+    
+    private lazy var deviceConnectCollectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.itemSize = CGSize(width: 80, height: 80)
+        layout.minimumLineSpacing = 16
+        
+        let collectinoView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectinoView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "deviceCVC")
+        collectinoView.showsHorizontalScrollIndicator = false
+        collectinoView.backgroundColor = .clear
+        
+        collectinoView.delegate = self
+        collectinoView.dataSource = self
+        
+        return collectinoView
+    }()
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configUI()
         setupLayout()
+//        setupCollectionView()
     }
     
+    // MARK: - Custom Method
     func configUI() {
-        
         logoImage.image = UIImage(named: "logo_typo")
         powBackImage.image = UIImage(named: "powBack")
         menuButton.setImage(UIImage(named: "menuButton"), for: .normal)
@@ -91,8 +126,8 @@ class MainVC: UIViewController {
         deviceConnectSubTitle.font = .enRegularSystemFont(ofSize: 14)
         shopSubTitle.font = .enRegularSystemFont(ofSize: 14)
         
-        healthCareCollectionView.backgroundColor = .subGray
-        deviceConncectCollectionView.backgroundColor = .subGray
+//        healthCareCollectionView.backgroundColor = .subGray
+//        deviceConncectCollectionView.backgroundColor = .systemPink
     }
     
     func setupLayout() {
@@ -101,8 +136,9 @@ class MainVC: UIViewController {
                           firstLine, powBackImage, healthCareTitle,
                           healthCareSubTitle, healthCareDetailButton, healthCareCollectionView,
                           secondLine, deviceConnectTitle, deviceConnectSubTitle,
-                          deviceConnectDetailButton, deviceConncectCollectionView, thirdLind,
+                          deviceConnectDetailButton, deviceConnectCollectionView, thirdLind,
                           shopTitle, shopSubTitle, shopDetailButton])
+//        view.addSubview(healthCareCollectionView ?? UICollectionView())
         
         logoImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(75)
@@ -174,12 +210,14 @@ class MainVC: UIViewController {
         // collectionView
         healthCareCollectionView.snp.makeConstraints { make in
             make.top.equalTo(healthCareSubTitle.snp.bottom).offset(17)
-            make.leading.trailing.equalToSuperview().inset(16)
+//            make.leading.equalToSuperview().inset(16)
+            make.leading.trailing.equalToSuperview()
             make.height.equalTo(100)
         }
         
         secondLine.snp.makeConstraints { make in
             make.top.equalTo(healthCareCollectionView.snp.bottom).offset(18)
+//            make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(130)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(0.5)
         }
@@ -201,35 +239,35 @@ class MainVC: UIViewController {
         }
         
         // collectionView
-        deviceConncectCollectionView.snp.makeConstraints { make in
+        deviceConnectCollectionView.snp.makeConstraints { make in
             make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(17)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.leading.trailing.equalToSuperview()
             make.height.equalTo(100)
         }
         
         thirdLind.snp.makeConstraints { make in
-            make.top.equalTo(deviceConncectCollectionView.snp.bottom).offset(18)
+            make.top.equalTo(deviceConnectCollectionView.snp.bottom).offset(18)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(0.5)
         }
-        
+
         shopTitle.snp.makeConstraints { make in
             make.top.equalTo(thirdLind.snp.bottom).offset(12)
             make.leading.equalToSuperview().offset(16)
         }
-        
+
         shopSubTitle.snp.makeConstraints { make in
             make.top.equalTo(shopTitle.snp.bottom).offset(5)
             make.leading.equalToSuperview().offset(16)
         }
-        
+
         shopDetailButton.snp.makeConstraints { make in
             make.bottom.equalTo(shopSubTitle.snp.bottom)
             make.trailing.equalToSuperview().inset(3)
             make.width.height.equalTo(34)
         }
     }
-
+    
     /*
     // MARK: - Navigation
 
@@ -240,4 +278,44 @@ class MainVC: UIViewController {
     }
     */
 
+}
+
+// MARK: - Extension
+extension MainVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case healthCareCollectionView:
+            return healthCareTitles.count
+        case deviceConnectCollectionView:
+            return 4
+        default:
+            return 5
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView {
+        case healthCareCollectionView:
+            guard let healthCareCell = healthCareCollectionView.dequeueReusableCell(withReuseIdentifier: healthCareCVC.identifier, for: indexPath) as? healthCareCVC else { return UICollectionViewCell() }
+            healthCareCell.backgroundColor = .subGray
+            healthCareCell.layer.cornerRadius = 20
+            healthCareCell.titleLabel.text = healthCareTitles[indexPath.item]
+            healthCareCell.numberLabel.text = healthCareNumbers[indexPath.item]
+            healthCareCell.unitLabel.text = healthCareUnits[indexPath.item]
+            
+            return healthCareCell
+            
+        case deviceConnectCollectionView:
+            let deviceCell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCVC", for: indexPath)
+            deviceCell.backgroundColor = .mainBlue
+            return deviceCell
+            
+        default:
+            return UICollectionViewCell.init()
+        }
+    }
+}
+
+extension MainVC: UICollectionViewDelegate {
+    
 }
