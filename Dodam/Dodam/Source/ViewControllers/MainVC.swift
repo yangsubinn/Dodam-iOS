@@ -9,8 +9,6 @@ import UIKit
 
 class MainVC: UIViewController {
     
-    let titleLabel = UILabel()
-    
     let logoImage = UIImageView()
     let menuButton = UIButton()
     let powBackImage = UIImageView()
@@ -54,7 +52,6 @@ class MainVC: UIViewController {
 //        titleLabel.textColor = .white
         
         logoImage.image = UIImage(named: "logo_typo")
-        logoImage.backgroundColor = .yellow
         
         menuButton.backgroundColor = .gray
         petImage.backgroundColor = .purple
@@ -92,18 +89,13 @@ class MainVC: UIViewController {
     }
     
     func setupLayout() {
-//        view.addSubview(titleLabel)
         view.addSubviews([logoImage, menuButton, petImage,
                           petNameLabel, petKindLabel, petAgeLabel,
                           firstLine, powBackImage, healthCareTitle,
                           healthCareSubTitle, healthCareDetailButton, healthCareCollectionView,
                           secondLine, deviceConnectTitle, deviceConnectSubTitle,
-                          deviceConnectDetailButton, deviceConnectDetailButton, thirdLind,
+                          deviceConnectDetailButton, deviceConncectCollectionView, thirdLind,
                           shopTitle, shopSubTitle, shopDetailButton])
-        
-//        titleLabel.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//        }
         
         logoImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(75)
@@ -196,23 +188,15 @@ class MainVC: UIViewController {
             make.width.height.equalTo(34)
         }
         
-        // 문제 collectionView
-//        deviceConncectCollectionView.snp.makeConstraints { make in
-////            make.top.equalTo(secondLine.snp.bottom).offset(69)
-//            make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(15)
-////            make.leading.equalTo(deviceConnectSubTitle.snp.leading)
-////            make.leading.equalTo(healthCareCollectionView.snp.leading)
-//            make.leading.trailing.equalToSuperview().inset(16)
-////            make.edges.equalToSuperview().inset(16)
-////            make.trailing.equalToSuperview().inset(16)
-//            make.height.equalTo(81)
-////            make.width.equalTo(300)
-//        }
-        // 문제 끝
+        // collectionView
+        deviceConncectCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(15)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(81)
+        }
         
         thirdLind.snp.makeConstraints { make in
-//            make.top.equalTo(deviceConcectCollectionView.snp.bottom).offset(21)
-            make.top.equalTo(deviceConnectSubTitle).offset(89)
+            make.top.equalTo(deviceConncectCollectionView.snp.bottom).offset(21)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(0.5)
         }
