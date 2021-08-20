@@ -8,7 +8,7 @@
 import UIKit
 
 class MainVC: UIViewController {
-    
+    // MARK: - Properties
     let logoImage = UIImageView()
     let menuButton = UIButton()
     let powBackImage = UIImageView()
@@ -18,21 +18,22 @@ class MainVC: UIViewController {
     let petAgeLabel = UILabel()
     let petBirthYearLabel = UILabel()
     let editPetButton = UIButton()
-    
     let firstLine = UIView()
     let healthCareTitle = UILabel()
     let healthCareSubTitle = UILabel()
     let healthCareDetailButton = UIButton()
-    
     let secondLine = UIView()
     let deviceConnectTitle = UILabel()
     let deviceConnectSubTitle = UILabel()
     let deviceConnectDetailButton = UIButton()
-    
     let thirdLind = UIView()
     let shopTitle = UILabel()
     let shopSubTitle = UILabel()
     let shopDetailButton = UIButton()
+    
+    let healthCareTitles = ["체중", "심박수", "호흡수", "체온", "수면관리"]
+    let healthCareNumbers = ["6.7", "90", "18", "38.5", "8"]
+    let healthCareUnits = ["kg", "bpm", "회/분", "도", "시간 취침"]
     
     private lazy var healthCareCollectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -42,7 +43,7 @@ class MainVC: UIViewController {
         layout.minimumLineSpacing = 16
         
         let collectinoView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectinoView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "healthCareCell")
+        collectinoView.register(healthCareCVC.self, forCellWithReuseIdentifier: healthCareCVC.identifier)
         collectinoView.showsHorizontalScrollIndicator = false
         collectinoView.backgroundColor = .clear
         
@@ -60,7 +61,7 @@ class MainVC: UIViewController {
         layout.minimumLineSpacing = 16
         
         let collectinoView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectinoView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "deviceCell")
+        collectinoView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "deviceCVC")
         collectinoView.showsHorizontalScrollIndicator = false
         collectinoView.backgroundColor = .clear
         
@@ -70,6 +71,7 @@ class MainVC: UIViewController {
         return collectinoView
     }()
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,6 +80,7 @@ class MainVC: UIViewController {
 //        setupCollectionView()
     }
     
+    // MARK: - Custom Method
     func configUI() {
         logoImage.image = UIImage(named: "logo_typo")
         powBackImage.image = UIImage(named: "powBack")
@@ -277,11 +280,12 @@ class MainVC: UIViewController {
 
 }
 
+// MARK: - Extension
 extension MainVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case healthCareCollectionView:
-            return 5
+            return healthCareTitles.count
         case deviceConnectCollectionView:
             return 4
         default:
@@ -292,13 +296,17 @@ extension MainVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case healthCareCollectionView:
-            let healthCareCell = collectionView.dequeueReusableCell(withReuseIdentifier: "healthCareCell", for: indexPath)
+            guard let healthCareCell = healthCareCollectionView.dequeueReusableCell(withReuseIdentifier: healthCareCVC.identifier, for: indexPath) as? healthCareCVC else { return UICollectionViewCell() }
             healthCareCell.backgroundColor = .subGray
             healthCareCell.layer.cornerRadius = 20
+            healthCareCell.titleLabel.text = healthCareTitles[indexPath.item]
+            healthCareCell.numberLabel.text = healthCareNumbers[indexPath.item]
+            healthCareCell.unitLabel.text = healthCareUnits[indexPath.item]
+            
             return healthCareCell
             
         case deviceConnectCollectionView:
-            let deviceCell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCell", for: indexPath)
+            let deviceCell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCVC", for: indexPath)
             deviceCell.backgroundColor = .mainBlue
             return deviceCell
             
