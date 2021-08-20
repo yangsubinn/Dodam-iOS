@@ -19,6 +19,7 @@
 		2B04E5FE26CAD7EF00DCEABA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B04E5F526CAD45B00DCEABA /* Lato-Bold.ttf */; };
 		2B20C04126CB835300037FDD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04026CB835300037FDD /* UIView+Extension.swift */; };
 		2B20C04326CB8B6E00037FDD /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04226CB8B6E00037FDD /* BackButton.swift */; };
+		2B4A8DA726CEA6740058690A /* HealthCareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A8DA626CEA6740058690A /* HealthCareVC.swift */; };
 		2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A726CAA44800E24A5E /* AppDelegate.swift */; };
 		2BA107AA26CAA44800E24A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107A926CAA44800E24A5E /* SceneDelegate.swift */; };
 		2BA107AF26CAA44800E24A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107AD26CAA44800E24A5E /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		2B04E5F926CAD7E400DCEABA /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2B20C04026CB835300037FDD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2B20C04226CB8B6E00037FDD /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		2B4A8DA626CEA6740058690A /* HealthCareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareVC.swift; sourceTree = "<group>"; };
 		2BA107A426CAA44800E24A5E /* Dodam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dodam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107A726CAA44800E24A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA107A926CAA44800E24A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */,
 				2BBEE1C426CC18E5009064B9 /* MainVC.swift */,
+				2B4A8DA626CEA6740058690A /* HealthCareVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4A8DA726CEA6740058690A /* HealthCareVC.swift in Sources */,
 				2B04E5F426CAD3EE00DCEABA /* UIFont+Extension.swift in Sources */,
 				2BBEE1C526CC18E5009064B9 /* MainVC.swift in Sources */,
 				2BA107A826CAA44800E24A5E /* AppDelegate.swift in Sources */,

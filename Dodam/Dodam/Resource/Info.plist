@@ -6,9 +6,9 @@
 	<array>
 		<string>Lato-Bold.ttf</string>
 		<string>Lato-Regular.ttf</string>
-		<string>AppleSDGothicNeoB</string>
-		<string>AppleSDGothicNeoL</string>
-		<string>AppleSDGothicNeoM</string>
+		<string>AppleSDGothicNeoB.ttf</string>
+		<string>AppleSDGothicNeoL.ttf</string>
+		<string>AppleSDGothicNeoM.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

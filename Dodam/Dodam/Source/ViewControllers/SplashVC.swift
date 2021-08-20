@@ -121,7 +121,7 @@ class SplashVC: UIViewController, UITextFieldDelegate {
         divideLine.alpha = 0.2
         
         otherLoginLabel.text = "그 외의 로그인"
-//        otherLoginLabel.font = .AppleSDGothicNeo(type: .Medium, size: 10)
+//        otherLoginLabel.font = .AppleSDGothicNeo(type: .Medium, size: 8)
         otherLoginLabel.font = .systemFont(ofSize: 12)
     }
     
