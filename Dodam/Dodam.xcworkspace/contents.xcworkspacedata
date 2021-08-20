@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Dodam.xcodeproj">
+      location = "group:/Users/yangsubin/Desktop/Dodam-iOS/Dodam/Dodam.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
