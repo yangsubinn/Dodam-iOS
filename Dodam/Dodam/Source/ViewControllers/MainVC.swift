@@ -46,30 +46,33 @@ class MainVC: UIViewController {
     }
     
     func configUI() {
-//        view.backgroundColor = .mainBlue
-
-//        titleLabel.text = "메인뷰다 환영~"
-//        titleLabel.textColor = .white
         
         logoImage.image = UIImage(named: "logo_typo")
+        powBackImage.image = UIImage(named: "powBack")
+        menuButton.setImage(UIImage(named: "menuButton"), for: .normal)
+        editPetButton.setImage(UIImage(named: "editButton"), for: .normal)
+        petImage.image = UIImage(named: "petImage")
+        healthCareDetailButton.setImage(UIImage(named: "detailButton"), for: .normal)
+        deviceConnectDetailButton.setImage(UIImage(named: "detailButton"), for: .normal)
+        shopDetailButton.setImage(UIImage(named: "detailButton"), for: .normal)
         
-        menuButton.backgroundColor = .gray
-        petImage.backgroundColor = .purple
-        editPetButton.backgroundColor = .blue
-        powBackImage.backgroundColor = .lightGray
-        firstLine.backgroundColor = .red
-        secondLine.backgroundColor = .yellow
-        thirdLind.backgroundColor = .blue
+        firstLine.backgroundColor = .lightGray
+        secondLine.backgroundColor = .lightGray
+        thirdLind.backgroundColor = .lightGray
+        
+        firstLine.alpha = 0.5
+        secondLine.alpha = 0.5
+        thirdLind.alpha = 0.5
         
         petNameLabel.text = "양감자"
         petKindLabel.text = "강아지"
         petAgeLabel.text = "7살"
         petBirthYearLabel.text = "(2014년생)"
         
-        petNameLabel.font = .systemFont(ofSize: 20, weight: .semibold)
-        petKindLabel.font = .systemFont(ofSize: 12, weight: .medium)
-        petAgeLabel.font = .systemFont(ofSize: 12, weight: .medium)
-        petBirthYearLabel.font = .systemFont(ofSize: 12, weight: .medium)
+        petNameLabel.font = .systemFont(ofSize: 22, weight: .semibold)
+        petKindLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        petAgeLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        petBirthYearLabel.font = .systemFont(ofSize: 14, weight: .regular)
         
         healthCareTitle.text = "HealthCare"
         healthCareSubTitle.text = "건강 관리"
@@ -80,17 +83,21 @@ class MainVC: UIViewController {
         shopTitle.text = "Shop"
         shopSubTitle.text = "반려동물 양감자를 위한 맞춤형 제품을 구매해보세요!"
         
-        healthCareDetailButton.backgroundColor = .systemPink
-        deviceConnectDetailButton.backgroundColor = .systemPink
-        shopDetailButton.backgroundColor = .systemPink
+        healthCareTitle.font = .enBoldSystemFont(ofSize: 20)
+        deviceConnectTitle.font = .enBoldSystemFont(ofSize: 20)
+        shopTitle.font = .enBoldSystemFont(ofSize: 20)
         
-        healthCareCollectionView.backgroundColor = .cyan
-        deviceConncectCollectionView.backgroundColor = .cyan
+        healthCareSubTitle.font = .enRegularSystemFont(ofSize: 14)
+        deviceConnectSubTitle.font = .enRegularSystemFont(ofSize: 14)
+        shopSubTitle.font = .enRegularSystemFont(ofSize: 14)
+        
+        healthCareCollectionView.backgroundColor = .subGray
+        deviceConncectCollectionView.backgroundColor = .subGray
     }
     
     func setupLayout() {
         view.addSubviews([logoImage, menuButton, petImage,
-                          petNameLabel, petKindLabel, petAgeLabel,
+                          petNameLabel, petKindLabel, petAgeLabel, petBirthYearLabel,
                           firstLine, powBackImage, healthCareTitle,
                           healthCareSubTitle, healthCareDetailButton, healthCareCollectionView,
                           secondLine, deviceConnectTitle, deviceConnectSubTitle,
@@ -106,8 +113,8 @@ class MainVC: UIViewController {
         
         menuButton.snp.makeConstraints { make in
             make.centerY.equalTo(logoImage.snp.centerY)
-            make.trailing.equalToSuperview().inset(1)
-            make.width.height.equalTo(34)
+            make.trailing.equalToSuperview().inset(3)
+            make.width.height.equalTo(34) // 34 더 키워야될 것 같음
         }
         
         petImage.snp.makeConstraints { make in
@@ -122,13 +129,18 @@ class MainVC: UIViewController {
         }
         
         petKindLabel.snp.makeConstraints { make in
-            make.top.equalTo(petNameLabel.snp.bottom).offset(11)
+            make.top.equalTo(petNameLabel.snp.bottom).offset(8)
             make.leading.equalTo(petImage.snp.trailing).offset(14)
         }
         
         petAgeLabel.snp.makeConstraints { make in
-            make.top.equalTo(petKindLabel.snp.bottom).offset(8)
+            make.top.equalTo(petKindLabel.snp.bottom).offset(6)
             make.leading.equalTo(petImage.snp.trailing).offset(14)
+        }
+        
+        petBirthYearLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(petAgeLabel.snp.centerY)
+            make.leading.equalTo(petAgeLabel.snp.trailing)
         }
         
         firstLine.snp.makeConstraints { make in
@@ -144,59 +156,59 @@ class MainVC: UIViewController {
         }
         
         healthCareTitle.snp.makeConstraints { make in
-            make.top.equalTo(firstLine.snp.bottom).offset(12)
+            make.top.equalTo(firstLine.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(16)
         }
         
         healthCareSubTitle.snp.makeConstraints { make in
-            make.top.equalTo(healthCareTitle.snp.bottom).offset(10)
+            make.top.equalTo(healthCareTitle.snp.bottom).offset(5)
             make.leading.equalToSuperview().offset(16)
         }
         
         healthCareDetailButton.snp.makeConstraints { make in
             make.bottom.equalTo(healthCareSubTitle.snp.bottom)
-            make.trailing.equalToSuperview().inset(1)
+            make.trailing.equalToSuperview().inset(3)
             make.width.height.equalTo(34)
         }
         
         // collectionView
         healthCareCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(healthCareSubTitle.snp.bottom).offset(15)
+            make.top.equalTo(healthCareSubTitle.snp.bottom).offset(17)
             make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(81)
+            make.height.equalTo(100)
         }
         
         secondLine.snp.makeConstraints { make in
-            make.top.equalTo(healthCareCollectionView.snp.bottom).offset(21)
+            make.top.equalTo(healthCareCollectionView.snp.bottom).offset(18)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(0.5)
         }
         
         deviceConnectTitle.snp.makeConstraints { make in
-            make.top.equalTo(secondLine.snp.bottom).offset(12)
+            make.top.equalTo(secondLine.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(16)
         }
         
         deviceConnectSubTitle.snp.makeConstraints { make in
-            make.top.equalTo(deviceConnectTitle.snp.bottom).offset(10)
+            make.top.equalTo(deviceConnectTitle.snp.bottom).offset(5)
             make.leading.equalToSuperview().offset(16)
         }
         
         deviceConnectDetailButton.snp.makeConstraints { make in
             make.bottom.equalTo(deviceConnectSubTitle.snp.bottom)
-            make.trailing.equalToSuperview().inset(1)
+            make.trailing.equalToSuperview().inset(3)
             make.width.height.equalTo(34)
         }
         
         // collectionView
         deviceConncectCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(15)
+            make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(17)
             make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(81)
+            make.height.equalTo(100)
         }
         
         thirdLind.snp.makeConstraints { make in
-            make.top.equalTo(deviceConncectCollectionView.snp.bottom).offset(21)
+            make.top.equalTo(deviceConncectCollectionView.snp.bottom).offset(18)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(0.5)
         }
@@ -207,13 +219,13 @@ class MainVC: UIViewController {
         }
         
         shopSubTitle.snp.makeConstraints { make in
-            make.top.equalTo(shopTitle.snp.bottom).offset(10)
+            make.top.equalTo(shopTitle.snp.bottom).offset(5)
             make.leading.equalToSuperview().offset(16)
         }
         
         shopDetailButton.snp.makeConstraints { make in
             make.bottom.equalTo(shopSubTitle.snp.bottom)
-            make.trailing.equalToSuperview().inset(1)
+            make.trailing.equalToSuperview().inset(3)
             make.width.height.equalTo(34)
         }
     }
