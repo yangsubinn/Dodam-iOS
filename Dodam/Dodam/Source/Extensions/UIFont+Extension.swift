@@ -43,11 +43,11 @@ extension UIFont {
             var name: String {
                 switch self {
                 case .Bold:
-                    return "AppleSDGothicNeoB"
+                    return AppFontName.krBold //"AppleSDGothicNeoB"
                 case .Medium:
-                    return "AppleSDGothicNeoM"
+                    return AppFontName.krMedium //"AppleSDGothicNeoM"
                 case .Light:
-                    return "AppleSDGothicNeoL"
+                    return AppFontName.krLight //"AppleSDGothicNeoL"
 
                 }
             }
