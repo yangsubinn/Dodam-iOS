@@ -35,6 +35,8 @@ class MainVC: UIViewController {
     let healthCareNumbers = ["6.7", "90", "18", "38.5", "8"]
     let healthCareUnits = ["kg", "bpm", "회/분", "도", "시간 취침"]
     
+    let devices = ["feed", "home", "bed", "cattower"]
+    
     private lazy var healthCareCollectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -57,11 +59,11 @@ class MainVC: UIViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-        layout.itemSize = CGSize(width: 80, height: 80)
+        layout.itemSize = CGSize(width: 68, height: 68)
         layout.minimumLineSpacing = 16
         
         let collectinoView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectinoView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "deviceCVC")
+        collectinoView.register(deviceCVC.self, forCellWithReuseIdentifier: deviceCVC.identifier)
         collectinoView.showsHorizontalScrollIndicator = false
         collectinoView.backgroundColor = .clear
         
@@ -125,9 +127,6 @@ class MainVC: UIViewController {
         healthCareSubTitle.font = .enRegularSystemFont(ofSize: 14)
         deviceConnectSubTitle.font = .enRegularSystemFont(ofSize: 14)
         shopSubTitle.font = .enRegularSystemFont(ofSize: 14)
-        
-//        healthCareCollectionView.backgroundColor = .subGray
-//        deviceConncectCollectionView.backgroundColor = .systemPink
     }
     
     func setupLayout() {
@@ -210,14 +209,12 @@ class MainVC: UIViewController {
         // collectionView
         healthCareCollectionView.snp.makeConstraints { make in
             make.top.equalTo(healthCareSubTitle.snp.bottom).offset(17)
-//            make.leading.equalToSuperview().inset(16)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(100)
         }
         
         secondLine.snp.makeConstraints { make in
             make.top.equalTo(healthCareCollectionView.snp.bottom).offset(18)
-//            make.top.equalTo(deviceConnectSubTitle.snp.bottom).offset(130)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(0.5)
         }
@@ -306,8 +303,10 @@ extension MainVC: UICollectionViewDataSource {
             return healthCareCell
             
         case deviceConnectCollectionView:
-            let deviceCell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCVC", for: indexPath)
-            deviceCell.backgroundColor = .mainBlue
+            guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+            deviceCell.backgroundColor = .clear
+            deviceCell.deviceImage.image = UIImage(named: "\(devices[indexPath.item])")
+            
             return deviceCell
             
         default:
