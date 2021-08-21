@@ -19,8 +19,6 @@ class healthCareCVC: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        configUI()
-        setupLayout()
     }
     
     override func prepareForReuse() {
@@ -28,36 +26,31 @@ class healthCareCVC: UICollectionViewCell {
         
     }
     
-//    override init(style: UICollectionViewCell.CellStyle, reuseIdentifier: String?) {
-//            super.init(style: style, reuseIdentifier: reuseIdentifier)
-//
-//        configUI()
-//        setupLayout()
-//    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//    }
+        // cell은 init에서 custom method 넣어서 적용됨
+        configUI()
+        setupLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Custom Method
     private func configUI() {
-        self.backgroundColor = .yellow
         
         titleLabel.text = "제목"
         numberLabel.text = "숫자"
         unitLabel.text = "단위"
         
-        titleLabel.font = .systemFont(ofSize: 16, weight: .medium)
-        numberLabel.font = .enBoldSystemFont(ofSize: 22)
-        unitLabel.font = .systemFont(ofSize: 14, weight: .medium)
+        titleLabel.font = .systemFont(ofSize: 15, weight: .medium)
+        numberLabel.font = .enBoldSystemFont(ofSize: 26)
+        unitLabel.font = .systemFont(ofSize: 13, weight: .regular)
         
         titleLabel.textColor = .mainBlue
-        numberLabel.textColor = .pointOrange100
+        numberLabel.textColor = .orange
         unitLabel.textColor = .mainBlue
     }
     
@@ -65,13 +58,13 @@ class healthCareCVC: UICollectionViewCell {
         addSubviews([titleLabel, numberLabel, unitLabel])
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
-            make.leading.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(22)
+            make.leading.equalToSuperview().offset(16)
         }
         
         numberLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(20)
+            make.top.equalTo(titleLabel.snp.bottom).offset(7)
+            make.leading.equalToSuperview().offset(16)
         }
         
         unitLabel.snp.makeConstraints { make in
