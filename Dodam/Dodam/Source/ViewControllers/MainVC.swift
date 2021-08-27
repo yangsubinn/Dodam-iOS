@@ -284,7 +284,13 @@ extension MainVC: UICollectionViewDataSource {
         case healthCareCollectionView:
             return healthCareTitles.count
         case deviceConnectCollectionView:
-            return 4
+//            switch devices.count {
+//            case 0...devices.count:
+//                devices.count
+//            default:
+//                
+//            }
+            return devices.count + 1
         default:
             return 5
         }
@@ -303,10 +309,45 @@ extension MainVC: UICollectionViewDataSource {
             return healthCareCell
             
         case deviceConnectCollectionView:
+            let count = indexPath.row
+            print(count)
+            // count가 맨 뒤 숫자면 플러스 아이콘을 보이도록
+            switch indexPath.count {
+            case 0...indexPath.count:
+                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+                deviceCell.backgroundColor = .clear
+                deviceCell.deviceImage.image = UIImage(named: "\(devices[indexPath.item])")
+                return deviceCell
+            case indexPath.count + 1:
+                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+                deviceCell.backgroundColor = .clear
+                deviceCell.deviceImage.image = UIImage(named: "addButton")
+                return deviceCell
+            default:
+                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+                deviceCell.backgroundColor = .clear
+                deviceCell.deviceImage.image = UIImage(named: "addButton")
+                return deviceCell
+            }
+            
+//
+//            if indexPath.count == 0...4 {
+//                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+//                deviceCell.backgroundColor = .clear
+//                deviceCell.deviceImage.image = UIImage(named: "\(devices[indexPath.item])")
+//                return deviceCell
+//            } if else {
+//                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+//                deviceCell.backgroundColor = .clear
+//                deviceCell.deviceImage.image = UIImage(named: "addButton")
+//                return deviceCell
+//            }
+        
+        
             guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
             deviceCell.backgroundColor = .clear
             deviceCell.deviceImage.image = UIImage(named: "\(devices[indexPath.item])")
-            
+
             return deviceCell
             
         default:
