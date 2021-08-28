@@ -80,10 +80,14 @@ class MainVC: UIViewController {
         configUI()
         setupLayout()
 //        setupCollectionView()
+        
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     // MARK: - Custom Method
     func configUI() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         logoImage.image = UIImage(named: "logo_typo")
         powBackImage.image = UIImage(named: "powBack")
         menuButton.setImage(UIImage(named: "menuButton"), for: .normal)
@@ -264,6 +268,11 @@ class MainVC: UIViewController {
         }
     }
     
+    private func setupAddTarget() {
+//        healthCareCollectionView.addTarget(self, action: #selector(touchUpHealthCareCollectionView))
+//        deviceConnectCollectionView.addTarget(self, action: #selector(touchUpDeviceCollectionView(_:)))
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -283,13 +292,6 @@ extension MainVC: UICollectionViewDataSource {
         case healthCareCollectionView:
             return healthCareTitles.count
         case deviceConnectCollectionView:
-//            switch devices.count {
-//            case 0...devices.count:
-//                devices.count
-//            default:
-//                
-//            }
-            print("devices.count: \(devices.count)") // 4
             return devices.count + 1 // 5
         default:
             return 5
@@ -337,5 +339,24 @@ extension MainVC: UICollectionViewDataSource {
 }
 
 extension MainVC: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch collectionView {
+        case healthCareCollectionView:
+            print("healthCareCollectionView clicked")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(identifier: "HealthCareVC") as? HealthCareVC else { return }
+            vc.checkLabel.text = "이게 왜 안돼"
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case deviceConnectCollectionView:
+            print("deviceConnectCollectionViewClicked")
+            return
+            
+        default:
+            return
+        }
+//        guard let vc = storyboard?.instantiateViewController(identifier: "HealthCareVC") as? HealthCareVC else { return }
+//        navigationController?.pushViewController(vc, animated: true)
+    }
 }

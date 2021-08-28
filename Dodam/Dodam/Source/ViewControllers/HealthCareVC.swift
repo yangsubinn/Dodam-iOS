@@ -8,6 +8,8 @@
 import UIKit
 
 class HealthCareVC: UIViewController {
+    
+    let checkLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

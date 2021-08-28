@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="1913.0434782608697" y="111.83035714285714"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--MainNavi-->
         <scene sceneID="7Eo-bh-VGE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNF-CU-WQ3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavi" title="MainNavi" automaticallyAdjustsScrollViewInsets="NO" id="eNF-CU-WQ3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2g-JI-z9O">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

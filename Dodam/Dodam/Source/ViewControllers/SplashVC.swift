@@ -293,12 +293,19 @@ class SplashVC: UIViewController, UITextFieldDelegate {
         /// 로그인 로직
         if idValue.text == "subin" && pwValue.text == "1234" {
             // MainVC로 전환할 때 1.0초 딜레이
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (t) in
+            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (t) in
                 t.invalidate()
-                guard let vc = self.storyboard?.instantiateViewController(identifier: "MainVC") as? MainVC else { return }
-                vc.modalPresentationStyle = .fullScreen
-                vc.modalTransitionStyle = .crossDissolve
-                self.present(vc, animated: true, completion: nil)
+                
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let dvc = storyboard.instantiateViewController(identifier: "MainNavi")
+//                dvc.modalPresentationStyle = .fullScreen
+//                self.present(dvc, animated: true, completion: nil)
+//                let sto
+                let vc = self.storyboard?.instantiateViewController(identifier: "MainNavi")
+//                vc.modalPresentationStyle = .fullScreen
+                vc?.modalTransitionStyle = .crossDissolve
+                vc?.modalPresentationStyle = .fullScreen
+                self.present(vc ?? UIViewController(), animated: true, completion: nil)
             }
         }
     }
