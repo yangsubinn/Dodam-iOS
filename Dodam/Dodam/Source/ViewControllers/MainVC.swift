@@ -36,6 +36,7 @@ class MainVC: UIViewController {
     let healthCareUnits = ["kg", "bpm", "회/분", "도", "시간 취침"]
     
     let devices = ["feed", "home", "bed", "cattower"]
+//    let devices = ["feed", "home", "bed"]
     
     private lazy var healthCareCollectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -284,7 +285,14 @@ extension MainVC: UICollectionViewDataSource {
         case healthCareCollectionView:
             return healthCareTitles.count
         case deviceConnectCollectionView:
-            return 4
+//            switch devices.count {
+//            case 0...devices.count:
+//                devices.count
+//            default:
+//                
+//            }
+            print("devices.count: \(devices.count)") // 4
+            return devices.count + 1 // 5
         default:
             return 5
         }
@@ -303,11 +311,26 @@ extension MainVC: UICollectionViewDataSource {
             return healthCareCell
             
         case deviceConnectCollectionView:
-            guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
-            deviceCell.backgroundColor = .clear
-            deviceCell.deviceImage.image = UIImage(named: "\(devices[indexPath.item])")
+            let count = indexPath.row
+            print("count:\(count)")
             
-            return deviceCell
+            switch count {
+            case 0...devices.count - 1:
+                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+                deviceCell.backgroundColor = .clear
+                deviceCell.deviceImage.image = UIImage(named: "\(devices[indexPath.item])")
+                return deviceCell
+            case devices.count:
+                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+                deviceCell.backgroundColor = .clear
+                deviceCell.deviceImage.image = UIImage(named: "addButton")
+                return deviceCell
+            default:
+                guard let deviceCell = deviceConnectCollectionView.dequeueReusableCell(withReuseIdentifier: deviceCVC.identifier, for: indexPath) as? deviceCVC else { return UICollectionViewCell() }
+                deviceCell.backgroundColor = .clear
+                deviceCell.deviceImage.image = UIImage(named: "addButton")
+                return deviceCell
+            }
             
         default:
             return UICollectionViewCell.init()
