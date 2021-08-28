@@ -36,7 +36,6 @@ class MainVC: UIViewController {
     let healthCareUnits = ["kg", "bpm", "회/분", "도", "시간 취침"]
     
     let devices = ["feed", "home", "bed", "cattower"]
-//    let devices = ["feed", "home", "bed"]
     
     private lazy var healthCareCollectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -138,7 +137,6 @@ class MainVC: UIViewController {
                           secondLine, deviceConnectTitle, deviceConnectSubTitle,
                           deviceConnectDetailButton, deviceConnectCollectionView, thirdLind,
                           shopTitle, shopSubTitle, shopDetailButton])
-//        view.addSubview(healthCareCollectionView ?? UICollectionView())
         
         logoImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(75)

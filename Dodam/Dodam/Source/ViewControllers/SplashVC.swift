@@ -23,6 +23,9 @@ class SplashVC: UIViewController, UITextFieldDelegate {
     let pwTextField = UITextField()
     let helpLabel = UILabel()
     
+    var idValue = UILabel()
+    var pwValue = UILabel()
+    
     let secondLoginButton = UIButton()
     let bottomSignUpButton = UIButton()
     let divideLine = UIView()
@@ -104,6 +107,8 @@ class SplashVC: UIViewController, UITextFieldDelegate {
         
         idTextField.borderStyle = .none
         pwTextField.borderStyle = .none
+        
+        pwTextField.isSecureTextEntry = true
 
         helpLabel.text = "비밀번호를 잊어버리셨나요?"
 //        helpLabel.font = .AppleSDGothicNeo(type: .Medium, size: 10)
@@ -274,13 +279,27 @@ class SplashVC: UIViewController, UITextFieldDelegate {
     @objc func touchUpSecondLoginButton(_ sender: UIButton) {
         print("LoginButton Clicked")
         
-        // MainVC로 전환할 때 1.0초 딜레이
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (t) in
-            t.invalidate()
-            guard let vc = self.storyboard?.instantiateViewController(identifier: "MainVC") as? MainVC else { return }
-            vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .crossDissolve
-            self.present(vc, animated: true, completion: nil)
+        idValue.text = idTextField.text
+        pwValue.text = pwTextField.text
+        
+//        if idTextField.text == "" {
+//            idborder.borderColor = CGColor.init(red: 247, green: 149, blue: 73, alpha: 0.4)
+//        }
+//
+//        if pwTextField.text == "" {
+//            pwborder.borderColor = CGColor.init(red: 247, green: 149, blue: 73, alpha: 0.4)
+//        }
+        
+        /// 로그인 로직
+        if idValue.text == "subin" && pwValue.text == "1234" {
+            // MainVC로 전환할 때 1.0초 딜레이
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (t) in
+                t.invalidate()
+                guard let vc = self.storyboard?.instantiateViewController(identifier: "MainVC") as? MainVC else { return }
+                vc.modalPresentationStyle = .fullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
     
