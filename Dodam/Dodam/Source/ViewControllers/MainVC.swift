@@ -344,14 +344,14 @@ extension MainVC: UICollectionViewDelegate {
         switch collectionView {
         case healthCareCollectionView:
             print("healthCareCollectionView clicked")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let vc = storyboard.instantiateViewController(identifier: "HealthCareVC") as? HealthCareVC else { return }
+            guard let vc = storyboard?.instantiateViewController(identifier: "HealthCareVC") as? HealthCareVC else { return }
             vc.checkLabel.text = "이게 왜 안돼"
             navigationController?.pushViewController(vc, animated: true)
             
         case deviceConnectCollectionView:
             print("deviceConnectCollectionViewClicked")
-            return
+            guard let vc = storyboard?.instantiateViewController(identifier: "DeviceVC") as? DeviceVC else { return }
+            navigationController?.pushViewController(vc, animated: true)
             
         default:
             return

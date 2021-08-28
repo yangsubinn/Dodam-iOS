@@ -27,6 +27,7 @@
 		2BA107B426CAA44900E24A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA107B226CAA44900E24A5E /* LaunchScreen.storyboard */; };
 		2BA107BF26CAA44900E24A5E /* DodamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107BE26CAA44900E24A5E /* DodamTests.swift */; };
 		2BA107CA26CAA44900E24A5E /* DodamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA107C926CAA44900E24A5E /* DodamUITests.swift */; };
+		2BB0D6E626DA237500C237B2 /* DeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB0D6E526DA237500C237B2 /* DeviceVC.swift */; };
 		2BBEE1C526CC18E5009064B9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C426CC18E5009064B9 /* MainVC.swift */; };
 		2BF6F15226D009AB0032C5F0 /* healthCareCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6F15126D009AB0032C5F0 /* healthCareCVC.swift */; };
 		2BF6F15426D009F00032C5F0 /* deviceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6F15326D009F00032C5F0 /* deviceCVC.swift */; };
@@ -79,6 +80,7 @@
 		2BA107C526CAA44900E24A5E /* DodamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA107C926CAA44900E24A5E /* DodamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodamUITests.swift; sourceTree = "<group>"; };
 		2BA107CB26CAA44900E24A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB0D6E526DA237500C237B2 /* DeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceVC.swift; sourceTree = "<group>"; };
 		2BBEE1C426CC18E5009064B9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		2BF6F15126D009AB0032C5F0 /* healthCareCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthCareCVC.swift; sourceTree = "<group>"; };
 		2BF6F15326D009F00032C5F0 /* deviceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceCVC.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				2B04E5E926CAAEBE00DCEABA /* SplashVC.swift */,
 				2BBEE1C426CC18E5009064B9 /* MainVC.swift */,
 				2B4A8DA626CEA6740058690A /* HealthCareVC.swift */,
+				2BB0D6E526DA237500C237B2 /* DeviceVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				2B20C04326CB8B6E00037FDD /* BackButton.swift in Sources */,
 				2B04E5F226CACC8200DCEABA /* UIColor+Extension.swift in Sources */,
 				2B04E5F026CABC0400DCEABA /* LightButton.swift in Sources */,
+				2BB0D6E626DA237500C237B2 /* DeviceVC.swift in Sources */,
 				2B04E5EE26CAB6DE00DCEABA /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

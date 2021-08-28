@@ -81,6 +81,21 @@
             </objects>
             <point key="canvasLocation" x="2738" y="112"/>
         </scene>
+        <!--DeviceVC-->
+        <scene sceneID="qPh-di-qbO">
+            <objects>
+                <viewController storyboardIdentifier="DeviceVC" title="DeviceVC" id="rOY-hB-yXl" customClass="DeviceVC" customModule="Dodam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xbv-Og-v8N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cKw-Wj-tUf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8n-D2-TmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="835"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
